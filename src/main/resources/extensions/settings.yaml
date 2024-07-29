@@ -1,0 +1,13 @@
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+    name: plugin-data-analysis-setting
+spec:
+    forms:
+      - group: baseConfig
+        label: 基本配置
+        formSchema:
+          - $formkit: text
+            name: blogname
+            label: 站点名称
+            value:
