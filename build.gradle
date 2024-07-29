@@ -16,9 +16,10 @@ repositories {
 }
 
 dependencies {
-    implementation platform('run.halo.tools.platform:plugin:2.11.0-SNAPSHOT')
+    implementation platform('run.halo.tools.platform:plugin:2.15.0-SNAPSHOT')
+    // https://mvnrepository.com/artifact/org.piwik.java.tracking/matomo-java-tracker-java17
+    implementation 'org.piwik.java.tracking:matomo-java-tracker-java17:3.0.3'
     compileOnly 'run.halo.app:api'
-
     testImplementation 'run.halo.app:api'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
