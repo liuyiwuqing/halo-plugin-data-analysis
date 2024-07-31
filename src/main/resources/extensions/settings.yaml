@@ -4,10 +4,33 @@ metadata:
     name: plugin-data-analysis-setting
 spec:
     forms:
-      - group: baseConfig
+      - group: basicSettings
         label: 基本配置
         formSchema:
           - $formkit: text
-            name: blogname
-            label: 站点名称
+            name: defaultToken
+            label: 默认 token
             value:
+            help: 自己生成即可,不得包含中文
+          - $formkit: radio
+            name: basicSettings
+            key: disableSslCertValidation
+            id: disableSslCertValidation
+            label: 是否禁用SSL证书验证
+            value: false
+            options:
+              - label: 启用
+                value: true
+              - label: 禁用
+                value: false
+          - $formkit: radio
+            name: logFailedTracking
+            key: logFailedTracking
+            id: logFailedTracking
+            label: 是否记录失败的跟踪记录
+            value: false
+            options:
+              - label: 启用
+                value: true
+              - label: 禁用
+                value: false
